@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{graphicx} % For including images
+\usepackage{tocloft}  % For customizing the table of contents
+\usepackage[nottoc]{tocbibind} % Automatically includes figures/tables in TOC
+
+% Optional: Adjust figure/table spacing in TOC
+\setlength{\cftfignumwidth}{3em} % Adjust spacing for figure entries
+\setlength{\cfttabnumwidth}{3em} % Adjust spacing for table entries
+
+\begin{document}
+	
+	% Title and TOC
+	\tableofcontents
+	
+	% Section with a figure
+	\section{Introduction}
+	Here is some text introducing the topic.
+	
+	\begin{figure}[h!]
+		\centering
+		\includegraphics[width=0.5\textwidth]{example-image} % Replace with your image
+		\caption{An example figure.}
+		\label{fig:example}
+	\end{figure}
+	
+	\newpage % For demonstration purposes, add a page break.
+	
+	% Section with a table
+	\section{Data Table}
+	Here is some text explaining the table.
+	
+	\begin{table}[h!]
+		\centering
+		\begin{tabular}{|c|c|c|}
+			\hline
+			Column 1 & Column 2 & Column 3 \\
+			\hline
+			Data 1   & Data 2   & Data 3   \\
+			\hline
+			Data 4   & Data 5   & Data 6   \\
+			\hline
+		\end{tabular}
+		\caption{An example table.}
+		\label{tab:example}
+	\end{table}
+	
+	% Add a reference to the figure and table in the text
+	As shown in Figure~\ref{fig:example} and Table~\ref{tab:example}, we see...
+	
+\end{document}
